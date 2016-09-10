@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<BorderPane prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.szilch.leuchtfeuer.controller.NavLightController">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <GridPane hgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="20.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <ComboBox fx:id="cboNavLightTypes" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="cboColors" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="%toolbar.label.type" />
+                        <Label text="%toolbar.label.color" GridPane.columnIndex="1" />
+                        <Label fx:id="lblGroups" text="%toolbar.label.groups" GridPane.columnIndex="2" />
+                        <Label fx:id="lblRecurrence" text="%toolbar.label.recurrence" GridPane.columnIndex="3" />
+                        <Slider fx:id="sdrGroups" blockIncrement="1.0" disable="true" majorTickUnit="1.0" max="9.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Slider fx:id="sdrRecurrences" disable="true" majorTickUnit="10.0" max="60.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <ToggleButton fx:id="tglStartStop" prefHeight="100.0" prefWidth="120.0" text="%toolbar.button.simulate" GridPane.columnIndex="4" GridPane.rowSpan="2" />
+                    </children>
+                </GridPane>
+            </items>
+        </ToolBar>
+    </top>
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER">
+            <children>
+                <Circle fx:id="fire" fill="#078d32" layoutX="512.0" layoutY="364.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" visible="false"/>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
