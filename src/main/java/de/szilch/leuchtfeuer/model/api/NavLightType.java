@@ -5,10 +5,10 @@ import de.szilch.leuchtfeuer.model.characteristics.FixedChar;
 import de.szilch.leuchtfeuer.model.characteristics.IsophaseChar;
 import de.szilch.leuchtfeuer.util.ResourceUtils;
 
-import java.util.ResourceBundle;
-
 /**
  * Created by szilch on 09.09.16.
+ *
+ * Type Description of a {@link NavLight}
  */
 public enum NavLightType {
 
@@ -22,6 +22,9 @@ public enum NavLightType {
 
     private boolean hasRecurrence;
     private boolean hasGroups;
+    /**
+     * used for the frontend in order to be multilingual
+     */
     private String resourceKey;
     private NavLightCharacteristic characteristic;
 

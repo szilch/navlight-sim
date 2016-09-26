@@ -19,6 +19,9 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
+/**
+ * Controller for Frontend!
+ */
 public class NavLightController implements Initializable {
 
     @FXML
@@ -60,7 +63,7 @@ public class NavLightController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList obList = FXCollections.observableList(Arrays.asList(NavLightType.values()));
+        ObservableList<NavLightType> obList = FXCollections.observableList(Arrays.asList(NavLightType.values()));
         cboNavLightTypes.getItems().clear();
         cboNavLightTypes.setItems(obList);
         cboNavLightTypes.getSelectionModel().selectFirst();
@@ -73,7 +76,7 @@ public class NavLightController implements Initializable {
             simulate();
         });
 
-        ObservableList obColorList = FXCollections.observableList(Arrays.asList(NavLightColor.values()));
+        ObservableList<NavLightColor> obColorList = FXCollections.observableList(Arrays.asList(NavLightColor.values()));
         cboColors.getItems().clear();
         cboColors.setItems(obColorList);
         cboColors.getSelectionModel().selectLast();
@@ -81,10 +84,11 @@ public class NavLightController implements Initializable {
 
         sdrGroups.valueProperty().addListener((observable, oldValue, newValue) -> simulate());
 
-        lblRecurrence.setText(ResourceUtils.getInstance().getString("toolbar.label.recurrence", 0));
-
-        sdrRecurrences.valueProperty().addListener((observable, oldValue, newValue) -> simulate());
-
+        updateRecurrenceLabel();
+        sdrRecurrences.valueProperty().addListener((observable, oldValue, newValue) -> {
+            updateRecurrenceLabel();
+            simulate();
+        });
         tglStartStop.selectedProperty().addListener((observable, oldValue, newValue) -> simulate());
     }
 
@@ -93,6 +97,10 @@ public class NavLightController implements Initializable {
         if (minimal > 0 && sdrRecurrences.getValue() < minimal && !sdrRecurrences.isDisable()) {
             sdrRecurrences.setValue(minimal);
         }
+        updateRecurrenceLabel();
+    }
+
+    private void updateRecurrenceLabel() {
         long value = (long) sdrRecurrences.getValue();
         lblRecurrence.setText(ResourceUtils.getInstance().getString("toolbar.label.recurrence", value));
     }

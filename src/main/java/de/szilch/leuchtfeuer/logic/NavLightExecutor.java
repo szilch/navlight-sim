@@ -7,11 +7,14 @@ import javafx.scene.shape.Shape;
 
 /**
  * Created by szilch on 08.09.16.
+ * Executor that is implemented as {@link Task}.
+ * It executes the configured {@link NavLight} by {@link #call()}
  */
 public class NavLightExecutor extends Task<Boolean>{
 
 
     private Shape lightElement;
+
     private NavLight navLightModel;
 
     public NavLightExecutor(Shape lightElement, NavLight navLightModel) {
@@ -25,7 +28,7 @@ public class NavLightExecutor extends Task<Boolean>{
 
     @Override
     protected Boolean call() throws Exception {
-        while(isCancelled() == false) {
+        while (!isCancelled()) {
             navLightModel.getCharacter().forEach(lm -> {
                 if (isCancelled()) {
                     return;
@@ -34,7 +37,7 @@ public class NavLightExecutor extends Task<Boolean>{
                 try {
                     Thread.sleep(lm.getMillis());
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    //interrupt is allowed here and will be fired inherited Task-Class
                 }
             });
         }

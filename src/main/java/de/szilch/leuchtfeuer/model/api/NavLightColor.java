@@ -2,10 +2,10 @@ package de.szilch.leuchtfeuer.model.api;
 
 import de.szilch.leuchtfeuer.util.ResourceUtils;
 
-import java.util.ResourceBundle;
-
 /**
  * Created by szilch on 09.09.16.
+ *
+ * NavLight Colors
  */
 public enum NavLightColor {
     BLUE("#0101DF", "color.blue"),
@@ -18,7 +18,11 @@ public enum NavLightColor {
 
 
     private String hexValue;
+    /**
+     * used for the frontend in order to be multilingual
+     */
     private String resourceKey;
+
     NavLightColor(String hexValue, String resourceKey) {
         this.hexValue = hexValue;
         this.resourceKey = resourceKey;

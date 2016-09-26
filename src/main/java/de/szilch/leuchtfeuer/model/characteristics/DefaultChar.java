@@ -8,6 +8,8 @@ import java.util.List;
 
 /**
  * Created by szilch on 09.09.16.
+ * A {@link DefaultChar} describes one "on" and "off" period of a navigational light.
+ * E.G. -> Occulting Light is 1000millis ON and 2000 millis OFF
  */
 public class DefaultChar implements NavLightCharacteristic {
 

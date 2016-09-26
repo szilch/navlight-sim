@@ -3,13 +3,14 @@ package de.szilch.leuchtfeuer.model.characteristics;
 import de.szilch.leuchtfeuer.model.api.NavLightCharacteristic;
 import de.szilch.leuchtfeuer.model.api.Phase;
 
-import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by szilch on 09.09.16.
+ *
+ * An {@link IsophaseChar} consists of two {@link Phase} from same duration. One {@link Phase} is on and one is off.
+ *
  */
 public class IsophaseChar implements NavLightCharacteristic {
 

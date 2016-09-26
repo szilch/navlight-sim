@@ -5,6 +5,9 @@ import java.util.List;
 
 /**
  * Created by szilch on 08.09.16.
+ *
+ * Entity of a {@link NavLight}
+ *
  */
 public class NavLight {
 
