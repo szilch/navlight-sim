@@ -1,6 +1,6 @@
 # navlight-sim
 Simulator that simulates the characteristics and recurrence of navigational lights
-[Official Homepage](https://szilch.github.io/navlight-sim/) 
+**[Official Homepage](https://szilch.github.io/navlight-sim/)**
 ##Features
 * Different types of navigational lights available (e.g. flashing light, occulting light, etc.)
 * Selection the color of the light
