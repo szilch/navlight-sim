@@ -8,7 +8,6 @@ import de.szilch.leuchtfeuer.util.ResourceUtils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -22,7 +21,7 @@ import java.util.ResourceBundle;
 /**
  * Controller for Frontend!
  */
-public class NavLightController implements Initializable {
+public class NavLightController {
 
     @FXML
     private Circle fire;
@@ -61,8 +60,8 @@ public class NavLightController implements Initializable {
         }
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    @FXML
+    public void initialize() {
         ObservableList<NavLightType> obList = FXCollections.observableList(Arrays.asList(NavLightType.values()));
         cboNavLightTypes.getItems().clear();
         cboNavLightTypes.setItems(obList);
