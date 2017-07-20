@@ -12,11 +12,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToolBar;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
-
-import java.net.URL;
 import java.util.Arrays;
-import java.util.ResourceBundle;
 
 /**
  * Controller for Frontend!
@@ -38,6 +38,9 @@ public class NavLightController {
     private Label lblRecurrence;
     @FXML
     private ToggleButton tglStartStop;
+
+    @FXML
+    private ToolBar toolBar;
 
     private NavLightExecutor executor;
     private NavLight navLight;
@@ -89,6 +92,15 @@ public class NavLightController {
             simulate();
         });
         tglStartStop.selectedProperty().addListener((observable, oldValue, newValue) -> simulate());
+    }
+
+    public void setFullscreen(MouseEvent event) {
+        if (event.getButton().equals(MouseButton.PRIMARY)) {
+            if (event.getClickCount() == 2) {
+                toolBar.setVisible(!toolBar.isVisible());
+                toolBar.setManaged(toolBar.isVisible());
+            }
+        }
     }
 
     private void setMinimalRecurrence() {

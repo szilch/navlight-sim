@@ -10,6 +10,7 @@ Simulator that simulates the characteristics and recurrence of navigational ligh
 * Selection of groups e.g. for occulting lights
 * Selection of recurrence of a light
 * Start/Stop the simulation
+* Hide toolbar on double clicking the light pane
 
 ## Screenshot
 
