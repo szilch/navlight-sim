@@ -14,10 +14,15 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         ResourceBundle bundle = ResourceBundle.getBundle("UIResources");
         Parent root = FXMLLoader.load(getClass().getResource("mainframe.fxml"), bundle);
-        primaryStage.setTitle(bundle.getString("global.appname"));
+        primaryStage.setTitle(getFrameTitle());
         primaryStage.setScene(new Scene(root, 1024, 768));
         primaryStage.setResizable(false);
         primaryStage.show();
+    }
+
+    private String getFrameTitle() {
+        ResourceBundle bundle = ResourceBundle.getBundle("UIResources");
+        return  bundle.getString("global.appname") + " v" + bundle.getString("global.version");
     }
 
 

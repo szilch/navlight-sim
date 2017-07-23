@@ -8,6 +8,12 @@
     <artifactId>navlight-sim</artifactId>
     <version>1.1-SNAPSHOT</version>
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -37,6 +43,11 @@
                     <vendor>Stefan Zilch</vendor>
                     <mainClass>de.szilch.leuchtfeuer.Main</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m5.1</version>
             </plugin>
         </plugins>
     </build>
