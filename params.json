@@ -1,6 +1,0 @@
-{
-  "name": "Navlight-sim",
-  "tagline": "Simulator that simulates the characteristics and recurrence of navigational light",
-  "body": "# navlight-sim\r\nSimulator that simulates the characteristics and recurrence of navigational lights\r\n\r\n##Features\r\n* Different Types of navigational lights available(e.g. flashing light, occulting light, etc.)\r\n* Selection the color of the light\r\n* Selection of groups e.g. for occulting lights\r\n* Selection of recurrence of a light\r\n* Start/Stop the simulation\r\n\r\n##Screenshot\r\n![Screenshot](https://raw.githubusercontent.com/szilch/navlight-sim/develop/md-images/screenshot.png \"Screenshot\")\r\n\r\n##License\r\nNavigation Light Simulator is licensed under the [MIT license](LICENSE.md).\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}

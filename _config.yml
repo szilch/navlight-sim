@@ -1,0 +1,8 @@
+title: Navlight-sim
+description: Simulator that simulates the characteristics and recurrence of navigational light
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-architect
+
+gems:
+  - jekyll-mentions
