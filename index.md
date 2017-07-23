@@ -13,7 +13,7 @@ Simulator that simulates the characteristics and recurrence of navigational ligh
 
 ## Screenshot
 
-![Screenshot](./md-images/screenshot.png?raw=true "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/szilch/navlight-sim/develop/md-images/screenshot.png "Screenshot")
 
 ## License
 
