@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.Circle?>
 <BorderPane prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.szilch.leuchtfeuer.controller.NavLightController">
     <top>
-        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <ToolBar fx:id="toolBar" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <items>
                 <GridPane hgap="10">
                     <columnConstraints>
@@ -36,7 +36,7 @@
         </ToolBar>
     </top>
     <center>
-        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER">
+        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER" onMouseClicked="#setFullscreen">
             <children>
                 <Circle fx:id="fire" fill="#078d32" layoutX="512.0" layoutY="364.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" visible="false"/>
             </children>
